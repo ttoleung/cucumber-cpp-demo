@@ -1,0 +1,24 @@
+Reference: https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-debian-8
+
+    3  sudo apt-get update
+    4  sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
+    5  sudo apt-get install git-core
+    8  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+    9  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+   10  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+   11  source ~/.bashrc
+   12  type rbenv
+   13  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+   14  rbenv install -l
+   16  rbenv install 2.4.1
+   19  rbenv global 2.4.1
+   20  ruby -v
+   22  echo "gem: --no-document" > ~/.gemrc
+   23  gem install bundler
+   24  gem env home
+   25  gem install rails
+   27  gem search '^rails$' --all
+   28  rails -v
+   29  gem install cucumber
+   30  cucumber
+   31  cucumber --help

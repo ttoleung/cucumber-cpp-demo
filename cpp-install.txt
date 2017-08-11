@@ -1,0 +1,35 @@
+Install the following:
+* cmake 2.8.12 or later
+* Boost 1.46 or later
+* GTest 1.6 or later
+* GMock 1.6 or later
+* Qt 5
+
+
+References:
+https://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04
+https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
+https://wiki.qt.io/Install_Qt_5_on_Ubuntu
+
+   59  sudo apt-get install libboost-all-dev
+   64  dpkg-query --show | grep boost
+   66  sudo apt-get install software-properties-common
+   70  sudo add-apt-repository ppa:george-edison55/cmake-3.x
+   71  sudo apt-get upgrade
+   72  sudo apt-get install cmake
+   75  cmake --version
+   81  sudo apt-get install libgtest-dev
+   84  cd /usr/src/gtest
+   91  sudo cmake CMakeLists.txt 
+   92  sudo make
+   93  sudo cp *.a /usr/lib
+  122  cmake CMakeLists.txt 
+  123  make
+  124  ./runTests 
+  130  wget http://download.qt.io/official_releases/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
+  131  chmod +x qt-opensource-linux-x64-5.7.0.run
+  132  ./qt-opensource-linux-x64-5.7.0.run
+  133  sudo apt-get install build-essential
+  134  sudo apt-get install libfontconfig1
+  135  sudo apt-get install mesa-common-dev
+  136  sudo apt-get install libglu1-mesa-dev -y
